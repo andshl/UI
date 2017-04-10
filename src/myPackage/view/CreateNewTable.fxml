@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myPackage.view.CreateNewTableController">
    <children>
-      <ButtonBar layoutX="14.0" layoutY="346.0" prefHeight="40.0" prefWidth="85.0" AnchorPane.bottomAnchor="5.0">
+       <ButtonBar layoutY="355.0" prefHeight="40.0" prefWidth="85.0" AnchorPane.bottomAnchor="5.0"
+                  AnchorPane.leftAnchor="-5.0">
         <buttons>
           <Button mnemonicParsing="false" onAction="#handleBack" text="Back" />
         </buttons>
@@ -20,12 +17,16 @@
           <Button mnemonicParsing="false" onAction="#handleCreateTable" text="Create" />
         </buttons>
       </ButtonBar>
-      <HBox layoutX="1.0" layoutY="138.0" prefHeight="48.0" prefWidth="600.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+       <HBox alignment="TOP_CENTER" layoutX="1.0" layoutY="138.0" prefHeight="48.0" prefWidth="600.0"
+             AnchorPane.bottomAnchor="214.0" AnchorPane.rightAnchor="-1.0">
          <children>
-            <Label text="Name" textAlignment="CENTER">
+             <Label text="Name:" textAlignment="CENTER">
                <HBox.margin>
-                  <Insets left="200.0" top="15.0" />
+                   <Insets right="10.0" top="15.0"/>
                </HBox.margin>
+                 <font>
+                     <Font size="14.0"/>
+                 </font>
             </Label>
             <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" />
          </children>
