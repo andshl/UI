@@ -15,10 +15,8 @@ import java.io.IOException;
  * Класс-контроллер для вывода списка таблиц выбранной базы.
  */
 public class TableListController {
+    //Список таблиц выбранной базы, который будет выводиться на экран.
     private Tables tables = new Tables();
-    private TableListController child;
-    private TableListController parent;
-
 
     @FXML
     private TableView<Table> tableView;
@@ -29,7 +27,7 @@ public class TableListController {
     @FXML
     private void initialize() {
         try {
-            init();
+            getListOfTablesFromDB();
             tableColumn.setCellValueFactory(cellData -> cellData.getValue().getName());
             tableView.setItems(tables.getTableObservableList());
         } catch (NullPointerException e) {
@@ -70,9 +68,9 @@ public class TableListController {
         return tables;
     }
 
-    //В этом методе мы будем делать запрос, получать список таблиц и добавлять их к нашему списку таблиц
-    private void init() {
-        tables.addTable(new Table("First table"));
+    //В этом методе мы будем делать запрос, получать список таблиц и добавлять их к нашему списку таблиц.
+    private void getListOfTablesFromDB() {
+        tables.addTable(new Table("First table"));//Временные таблицы
         tables.addTable(new Table("Second table"));
         tables.addTable(new Table("Third table"));
     }

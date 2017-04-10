@@ -21,11 +21,8 @@ public class Main extends Application {
         SceneBuilder sceneBuilder = new SceneBuilder();
         sceneBuilder.initialize();
 
-        showNextScene(0);
+        showNextScene(0);//Сцена TableList
     }
-
-    //view/CreateNewTable.fxml
-    //view/TableList.fxml
 
     public static void showNextScene(Integer index) {
         primaryStage.setScene(SceneBuilder.getScene(index));

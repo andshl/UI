@@ -19,12 +19,12 @@ public class CreateNewTableController {
         textArea.setText("");
     }
 
+    //Обработчик нажатия кнопки Create.
     @FXML
     private void handleCreateTable() {
         String text = textArea.getText();
 
         if (!"".equals(text)) {
-
             parent.getTables().addTable(new Table(text));
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -42,10 +42,9 @@ public class CreateNewTableController {
             alert.setContentText("Please set the name of the table.");
             alert.showAndWait();
         }
-
-
     }
 
+    //Обработчик нажатия кнопки Back
     @FXML
     private void handleBack() {
         textArea.clear();
@@ -54,10 +53,8 @@ public class CreateNewTableController {
 
     private TableListController parent;
 
-
     void setParent(TableListController parent) {
         this.parent = parent;
     }
-
 
 }

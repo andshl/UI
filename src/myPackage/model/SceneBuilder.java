@@ -1,7 +1,6 @@
 package myPackage.model;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import myPackage.Main;
 
@@ -10,8 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SceneBuilder {
-    public static Integer currentScene = 0;
-
+    //Список сцен и их контроллеров. Контроллеры нужны для передачи информации между сценами.
     private static List<Scene> scenes;
     private static List<Object> controllers;
 
@@ -24,10 +22,9 @@ public class SceneBuilder {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource(path));
-            Parent root = loader.load();
-            Object object = loader.getController();
-            controllers.add(object);
-            scenes.add(new Scene(root));
+
+            scenes.add(new Scene(loader.load()));
+            controllers.add(loader.getController());
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -45,7 +42,6 @@ public class SceneBuilder {
     public void initialize() throws IOException {
         addScene("view/TableList.fxml");
         addScene("view/CreateNewTable.fxml");
-
     }
 
 }
