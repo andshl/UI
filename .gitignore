@@ -1,5 +1,7 @@
 *.class
 
+out/production/UI/myPackage/view/*.fxml
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
