@@ -53,8 +53,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1484#1485#0" expanded="true" />
-                <element signature="e#1528#1529#0" expanded="true" />
-                <element signature="e#1564#1565#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,6 +107,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -207,7 +206,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -546,8 +545,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1564#1565#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,8 +696,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1564#1565#0" expanded="true" />
           </folding>
         </state>
       </provider>
