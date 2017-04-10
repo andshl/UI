@@ -4,8 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import myPackage.Main;
-import myPackage.model.SceneBuilder;
 import myPackage.model.Table;
+
+/**
+ * Класс-контроллер для окна создания новой таблицы в базе.
+ */
 
 public class CreateNewTableController {
     @FXML
@@ -22,18 +25,17 @@ public class CreateNewTableController {
 
         if (!"".equals(text)) {
 
-        TableListController tableListController = new TableListController();
-        tableListController.getTables().addTable(new Table(text));
+            parent.getTables().addTable(new Table(text));
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Success");
-        alert.setHeaderText("Table created");
-        alert.setContentText("The table " + text + " was successfully created!");
-        alert.showAndWait();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Table created");
+            alert.setContentText("The table " + text + " was successfully created!");
+            alert.showAndWait();
 
-        Main.showNextScene(0);
-        }
-        else {
+            textArea.clear();
+            Main.showNextScene(0);
+        } else {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("No text");
             alert.setHeaderText("No text");
@@ -46,9 +48,15 @@ public class CreateNewTableController {
 
     @FXML
     private void handleBack() {
-        //TODO add refreshing
-        SceneBuilder.getScene(0);
+        textArea.clear();
         Main.showNextScene(0);
+    }
+
+    private TableListController parent;
+
+
+    void setParent(TableListController parent) {
+        this.parent = parent;
     }
 
 
